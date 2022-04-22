@@ -1,0 +1,20 @@
+.navbar {
+  background-color: rgb(14, 14, 14);
+}
+
+.wraps{
+  margin-left: 50px;
+}
+
+.logoo{
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+  }
+  
+.Home, .Detail, .Favorites{
+  margin-top: 3px;
+}
+
+
+  
