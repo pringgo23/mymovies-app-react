@@ -1,6 +1,5 @@
 .background {
-    height: 100vh;
-    background-color: rgb(20, 20, 20);
+    background-color: rgb(25, 24, 24);
 
 }
 
@@ -12,9 +11,12 @@
     width : 50vh;
     border-radius: 5px;
     margin-right: 20px;
+    margin-top: 70px;
+    margin-left: 20px;
 }
 
-.penjelasan{
+#penjelasan{
+    margin-top: 30px;
     margin-left: 20px;
 }
 
