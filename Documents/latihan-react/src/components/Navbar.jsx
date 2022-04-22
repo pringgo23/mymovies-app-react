@@ -22,8 +22,8 @@ class NavbarComponents extends React.Component{
             <Nav className="me-auto">
                 <img className='logoo' src={movie}></img>
 
-                  <Nav.Link className={`${
-                this.state.currentPage === "Home" ? "active-nav" : ""
+                  <Nav.Link id='Home' className={`${
+                this.state.currentPage === "Home" ? "active-nav" : "home"
               } my-style`}
                   onClick={() => {
                     this.setState({
@@ -37,8 +37,8 @@ class NavbarComponents extends React.Component{
 
                 <img className='logoo' src={home}></img>
 
-                  <Nav.Link className={`${
-                this.state.currentPage === "Detail" ? "active-nav" : ""
+                  <Nav.Link id='Detail' className={`${
+                this.state.currentPage === "Detail" ? "active-nav" : "detail"
               } my-style`}
                   onClick={() => {
                     this.setState({
@@ -50,8 +50,8 @@ class NavbarComponents extends React.Component{
 
                 <img className='logoo' src={favorite}></img>
 
-                  <Nav.Link className={
-                this.state.currentPage === "Favorite" ? "active-nav" : ""
+                  <Nav.Link id='Favorite' className={
+                this.state.currentPage === "Favorite" ? "active-nav" : "favorite"
               }
               onClick={() => {
                 this.setState({
