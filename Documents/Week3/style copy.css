@@ -1,0 +1,42 @@
+*{
+    margin : 0; 
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    font-family: sans-serif;
+}
+
+.gambar{
+    padding-left: 30px;
+    margin-left: 30px;;
+}
+
+.kolom{
+    display: flex;
+    align-items: center;
+}
+
+nav ul {   
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li a{ 
+    color: #19345E;;
+    text-decoration: none;
+    font-size: 0.8em;
+    font: normal normal bold 13px/16px;
+}
+
+nav ul li a:hover{
+    color: #F47522;
+}
+
+nav ul li a:active{
+    color: #F47522;
+}
