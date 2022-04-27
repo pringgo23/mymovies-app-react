@@ -1,13 +1,16 @@
+#wrap{
+  margin-top: -30px;
+  margin-left: 30px;
+  background-color: rgb(25, 24, 24);
+}
+
 .gambar-1{
-  padding: 2.25rem;
+  padding: 2.75rem;
 }
 
 .judul-1{
   text-align: center;
-}
-
-#wrap   {
-  margin-left: 30px;
+  color: #fff;
 }
 
 .col-2{
@@ -20,4 +23,10 @@
   align-items: center;
   margin-top: 30px;
   margin-left: 20px;
+}
+
+.Button-Fav {
+  text-align: center;
+  margin: auto;
+  align-self: center;
 }

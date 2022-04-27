@@ -1,0 +1,54 @@
+file_to_add.md
+
+../../.CFUserTextEncoding
+        ../../.gitconfig
+        ../../.node_repl_history
+        ../../.npm/
+        ../../.ssh/
+        ../../.vscode/
+        ../../.zsh_history
+        ../../Applications/
+        ../../Basic-Programming-Part2/
+        ../../Desktop/
+        ../.localized
+        ../Frontend_ Submission Task Github.docx
+        ../Latihan/
+        ../Week3/Callback/
+        ../Week3/Web/
+        ../Week3/index copy.html
+        ../Week3/style copy.css
+        ../fe5.zip
+        ../fe5/
+macbookair@Macbooks-MacBook-Air Project % git commit -m "Pengumpulan project"
+On branch main
+Untracked files:
+        ../../.CFUserTextEncoding
+        ../../.gitconfig
+        ../../.node_repl_history
+        ../../.npm/
+        ../../.ssh/
+        ../../.vscode/
+        ../../.zsh_history
+        ../../Applications/
+        ../../Basic-Programming-Part2/
+        ../../Desktop/
+        ../.localized
+        ../Frontend_ Submission Task Github.docx
+        ../Latihan/
+        ../Week3/Callback/
+        ../Week3/Web/
+        ../Week3/index copy.html
+        ../Week3/style copy.css
+        ../fe5.zip
+        ../fe5/
+        ../htmlCssJs.zip
+        ../htmlCssJs/
+        ../latihan.code-workspace
+        ../latihan2/
+        ../workspace.code-workspace
+        ../../Downloads/
+        ../../Library/
+        ../../Movies/
+        ../../Music/
+        ../../Pictures/
+        ../../Public/

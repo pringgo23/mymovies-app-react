@@ -1,54 +1,88 @@
-import React, { Components } from 'react';
-import {Navbar,Container,Nav,Card,Table} from 'react-bootstrap';
-import morbius from '../img/morbius.jpg';
+import React, { useState,useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import '../css/Details.css';
+import axios from 'axios';
 
-class Detail extends React.Component{
-    render(){
+function Detail(){
+    const [dataDetail,setDataDetail] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [jenis,setJenis] = useState('');
+    const [production,setProduction] = useState()
+    const params = useParams();
+
+    useEffect( () => {
+        const fetchDetail = async() =>{
+            try {
+                const response = await axios.get
+                (`https://api.themoviedb.org/3/movie/${params.id}?api_key=b2f0ee9217d829b7deaa3ba29a6f813c&language=en-US`)
+    
+                let genretext = "";
+                response.data.genres.map((el,i) => {
+                   return( 
+                    genretext+= el.name +',')
+                }) 
+
+                let produktext = "";
+                response.data.production_companies.map((el,i) => {
+                    return(
+                    produktext += el.name +',')
+                })
+
+                setProduction(produktext);
+                setJenis(genretext);
+                setDataDetail(response.data);
+
+                
+            } catch (err) {
+                console.log(err);
+                
+            } finally{
+                setIsLoading(false)
+            }
+    
+        };
+
+        fetchDetail();
+    },[params])
+
+    
+
+    if (isLoading) {
+        return <h4>Now Loading...</h4>
+    }
+ 
+
         return(
         <div className='background'>
             <div id='flexx' className='row d-flex'> 
                 <div className='col-md-4'>
-                    <img id='gambar-detail' src={morbius} alt="" />
+                    <img id='gambar-detail' src={`https://image.tmdb.org/t/p/w500${dataDetail.poster_path}`} alt="" />
                 </div>
                 <div id='penjelasan' className='col-md-6'>
-                    <h1> Morbius </h1>
-                    <i>A New Marvel Legends Arrives</i> <hr />
-                        <div >
-                            <section> <h6> Genres : </h6>  
-                                <section> <h6> Action, </h6>  </section>
-                                <section> <h6> Science Ficiton, </h6></section>
-                                <section> <h6> Fantasy </h6> </section>
-                            </section>
-                        </div>
+                    <h1> {dataDetail.original_title} </h1>
+                    <i>{dataDetail.tagline}</i> <hr />
+                                 <h6> Genres : {jenis} </h6> 
                             <hr />
-                                <h6> Release Date : 30 March 2022 (US)</h6>
+                                <h6> Release Date: {dataDetail.release_date}</h6>
                             <hr />
-                                <h6> Duration : 1 hour 44 minute</h6>
+                                <h6> Popularity : {dataDetail.popularity}</h6>
                             <hr />
-                                <h6> Popularity : 837.412</h6>
+                                <h6> Production Companies : {production}</h6>
                             <hr />
-                                <h6> Production Companies : Columbia Pictures , Marvel Entertainment</h6>
+                                <h6> Status : {dataDetail.status}</h6>
                             <hr />
-                                <h6> Status : Released</h6>
-                            <hr />
-                                <h6> Original Language : English</h6>
-                            <hr />
-                                <h6> Budget : $75,000,000</h6>
-                            <hr />
-                                <h6> Revenue : $126,000,000</h6>
+                                <h6> Revenue : {dataDetail.revenue}</h6>
                             <hr />
                     </div>
             </div>
 
                 <div className='overview'>
                     <h1> Overview</h1>
-                    <p className='danger'>Dangerously ill with a rare blood disorder, and determined to save others suffering his same fate, Dr. Michael Morbius attempts a desperate gamble. What at first appears to be a radical success soon reveals itself to be a remedy potentially worse than the disease.</p>
+                    <p className='danger'>{dataDetail.overview}</p>
                 </div>
         </div>
             
         )
     }
-}
 
 export default Detail

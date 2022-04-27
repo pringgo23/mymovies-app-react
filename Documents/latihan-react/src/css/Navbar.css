@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgb(14, 14, 14);
+  background-color: rgb(118, 22, 22);
 }
 
 .wraps{
@@ -12,9 +12,18 @@
     margin-top: 3px;
   }
   
-.Home, .Detail, .Favorites{
-  margin-top: 3px;
+#Home, #Detail, #Favorite{
+  margin-top: 5px;
+  margin-right: 5px;
 }
+
+.active-nav {
+  color: #dcaa9a !important;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+
 
 
   

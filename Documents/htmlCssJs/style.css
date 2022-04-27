@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+}
+
+a {
+  transition: all 0.5s ease;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: solid 1px black;
+  padding: 5px;
+}
+
+.home {
+  background-image: url(https://wallpaperaccess.com/full/1794017.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.color-orangered {
+  color: orangered;
+}
+
+.font-pokemon {
+  font-family: "Press Start 2P", cursive;
+}
+
+.navbar-menu {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.bg-olive {
+  background-color: olive;
+}
+
+.bg-beige {
+  background-color: beige;
+}
+
+.div-pokemon {
+  padding: 15px;
+}
+
+.div-h1-pokemon {
+  padding: 10px;
+  margin: 0;
+}
+
+.visit-alterra {
+  padding-left: 10px;
+  color: deeppink;
+}
+
+.visit-alterra:visited {
+  color: olive;
+}
+
+.visit-alterra:hover {
+  color: magenta;
+}
+
+.logo-alta {
+  height: 8vh;
+}
+
+.btn-alterra {
+  background-color: #f07539;
+  color: white;
+  border-color: #f07539;
+}
+
+.btn-alterra:hover {
+  background-color: #cd632e;
+  color: white;
+  border-color: #cd632e;
+}
+
+.btn-tokopedia {
+  background-color: #50ad2a;
+  color: white;
+  border-color: #50ad2a;
+}
+
+.btn-ovo {
+  background-color: #432575;
+  color: white;
+  border-color: #432575;
+}
+
+#about-us-navbar {
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>My App</title>
+
+    <!-- inline style -->
+    <!-- <style>
+      span {
+        color: orangered;
+      }
+    </style> -->
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <!-- external style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 py-2">
+      <div class="container-fluid">
+        <img class="logo-alta" src="./logo-ALTA@2x.png" alt="" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="home">
+      <div class="container pt-3">
+        <p id="hello-world">Hello World</p>
+        <p class="bg-beige">Ini bg-beige</p>
+      </div>
+
+      <button class="btn btn-alterra" id="click-me">Click me!</button>
+
+      <button
+        type="button"
+        class="btn btn-alterra m-5"
+        onclick="handleClickBtnAlterra()"
+      >
+        Alterra
+      </button>
+      <button type="button" class="btn btn-primary m-5">Primary</button>
+
+      <h3>Row Col</h3>
+      <div class="container-fluid">
+        <div class="row w-100">
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+          <div class="col-1">1</div>
+        </div>
+
+        <div class="row w-100">
+          <div class="col-2">2</div>
+          <div class="col-2">2</div>
+          <div class="col-2">2</div>
+          <div class="col-2">2</div>
+          <div class="col-2">2</div>
+          <div class="col-2">2</div>
+        </div>
+
+        <div class="row w-100">
+          <div class="col-3">3</div>
+          <div class="col-3">3</div>
+          <div class="col-3">3</div>
+          <div class="col-3">3</div>
+        </div>
+
+        <div class="row w-100">
+          <div class="col-4">4</div>
+          <div class="col-4">4</div>
+          <div class="col-4">4</div>
+        </div>
+
+        <div class="row w-100">
+          <div class="col-6">6</div>
+          <div class="col-6">6</div>
+        </div>
+
+        <div class="row w-100">
+          <div class="col-12">12</div>
+        </div>
+
+        <div class="row w-100">
+          <div class="col-4 bg-olive">4</div>
+          <div class="col-6 bg-beige">6</div>
+          <div class="col-2 bg-olive">2</div>
+        </div>
+      </div>
+
+      <h3>Display Flex</h3>
+      <div class="container-fluid">
+        <div class="d-flex justify-content-between">
+          <div class="">1</div>
+          <div class="">2</div>
+          <div class="">3</div>
+          <div class="">4</div>
+          <div class="">5</div>
+          <div class="">6</div>
+          <div class="">7</div>
+          <div class="">8</div>
+          <div class="">9</div>
+          <div class="">10</div>
+          <div class="">11</div>
+          <div class="">12</div>
+        </div>
+      </div>
+
+      <!-- <div class="div-pokemon">
+          <h1 class="div-h1-pokemon font-pokemon">Welcome to Pokemon Land</h1>
+        </div> -->
+    </div>
+    <!-- <div>
+      <br />
+
+      <a class="visit-alterra" href="https://www.lg.com" target="_blank">
+        Visit Alterra.id
+      </a>
+
+      <br />
+      <div>
+        <img src="./images/logo-alterra.png" alt="Ini logo alterra" />
+
+        <span class="color-orangered navbar-menu">
+          <span>Home</span>
+          <span id="about-us-navbar">About Us</span>
+          <span>Contact</span>
+        </span>
+      </div>
+
+      <br />
+
+      <form>
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <div>
+            <label for="full-name">Full Name:</label>
+            <input
+              type="text"
+              id="full-name"
+              name="fullName"
+              placeholder="Your Full Name"
+            />
+          </div>
+          <br />
+          <div>
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your Email Here"
+            />
+          </div>
+        </fieldset>
+      </form>
+
+      <br />
+
+      <table>
+        <tr>
+          <th>No</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Yusuf</td>
+          <td>Untung</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Asha</td>
+          <td>Azrina</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Rafi</td>
+          <td>Sabil</td>
+        </tr>
+      </table>
+
+      <ul type="circle">
+        <li>Sayur</li>
+        <li>Sosis</li>
+        <li>Daging</li>
+        <li>Ikan</li>
+        <li>Bumbu</li>
+      </ul>
+
+      <ol type="i">
+        <li>Sayur</li>
+        <li>Sosis</li>
+        <li>Daging</li>
+        <li>Ikan</li>
+        <li>Bumbu</li>
+      </ol>
+
+      <br />
+      <img src="./images/logo-alterra.png" alt="Ini logo alterra" />
+      <br />
+      <br />
+      <a href="https://www.alterra.id" target="_blank"> Visit Alterra.id </a>
+      <br />
+      <strong>Ini Strong</strong>
+      <b>ini bold tag B</b>
+      <br />
+      <em>Ini Italic em</em>
+      <i>Ini Italic i</i>
+      <br />
+      <s>ini tag s</s>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
+        Totam atque architecto ad, fuga nesciunt excepturi, dolores voluptates
+        voluptatibus commodi placeat <br />
+        delectus perspiciatis incidunt alias quo odit aspernatur ratione
+        repellendus deleniti?
+      </p>
+
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+
+      <p>Paragraph</p>
+    </div> -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,18 +1,16 @@
-import React, {Components} from 'react';
-import home from '../img/home.png';
+import React, {useState} from 'react';
+import { Link } from 'react-router-dom'
 import movie from '../img/movie.png';
-import favorite from '../img/favorites.png'
+import home from '../img/home.png';
 import {Navbar,Container,Nav} from 'react-bootstrap';
 import '../css/Navbar.css';
 
-class NavbarComponents extends React.Component{
-
-  state = {
-    currentPage: "Home",
-  }
+ function NavbarComponents(){
+  const [currentPage,setCurrentPage] = useState();
 
 
-    render(){
+
+
         return (
       <Navbar className='navbar' expand="lg">
         <Container className='wraps'>
@@ -20,52 +18,34 @@ class NavbarComponents extends React.Component{
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <img className='logoo' src={movie}></img>
+                <img className='logoo' src={movie} alt= "movie" ></img>
 
-                  <Nav.Link className={`${
-                this.state.currentPage === "Home" ? "active-nav" : ""
-              } my-style`}
-                  onClick={() => {
-                    this.setState({
-                      currentPage: "Home",
-                    });
-
-                    this.props.currentPage("Home");
-              }}
+                  <Nav.Link id='Home' className={`${
                   
-                  href="#home"> Home </Nav.Link>
+                  currentPage === "Home" ? "active-nav" : "home"
 
-                <img className='logoo' src={home}></img>
-
-                  <Nav.Link className={`${
-                this.state.currentPage === "Detail" ? "active-nav" : ""
               } my-style`}
                   onClick={() => {
-                    this.setState({
-                      currentPage: "Detail",
-                    });
+                    setCurrentPage("Home");
+              }}> 
+              <Link to="/">Home</Link> 
+              </Nav.Link>
 
-                    this.props.currentPage("Detail");
-              }} href="#Detail"> Detail </Nav.Link>
+                <img className='logoo' src={home} alt= "favorite" ></img>
 
-                <img className='logoo' src={favorite}></img>
-
-                  <Nav.Link className={
-                this.state.currentPage === "Favorite" ? "active-nav" : ""
+                  <Nav.Link id='Favorite' className={
+                currentPage === "Favorite" ? "active-nav" : "favorite"
               }
               onClick={() => {
-                this.setState({
-                  currentPage: "Favorite",
-                });
-
-                this.props.currentPage("Favorite");
-              }} href="#Favorites"> Favorites </Nav.Link>
+                setCurrentPage("Favorite");}}> 
+                <Link to="/Favorites">Favorites</Link>
+                </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-        );
-    }
+    )
 }
+
 
 export default NavbarComponents;
