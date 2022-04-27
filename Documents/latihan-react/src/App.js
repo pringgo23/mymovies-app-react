@@ -31,7 +31,7 @@ function App() {
       <div id="movies">
         <Navbar />
 
-        <div className="p-5">
+        <div className="loading">
           {isLoading ? (
             <p>Loading...</p>
           ) : (

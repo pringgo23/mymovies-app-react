@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
-import home from '../img/home.png';
 import movie from '../img/movie.png';
 import favorite from '../img/favorites.png'
 import {Navbar,Container,Nav} from 'react-bootstrap';
@@ -31,16 +30,6 @@ import '../css/Navbar.css';
               }}> 
               <Link to="/">Home</Link> 
               </Nav.Link>
-
-                <img className='logoo' src={home} alt= "home" ></img>
-
-                  <Nav.Link id='Detail' className={`${
-                currentPage === "Detail" ? "active-nav" : "detail"
-              } my-style`}
-                  onClick={() => {
-                    setCurrentPage("Detail");}}> 
-                    <Link to="/detail">Detail</Link> 
-                    </Nav.Link>
 
                 <img className='logoo' src={favorite} alt= "favorite" ></img>
 
