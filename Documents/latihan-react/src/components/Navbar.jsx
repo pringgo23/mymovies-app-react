@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom'
 import movie from '../img/movie.png';
-import favorite from '../img/favorites.png'
+import home from '../img/home.png';
 import {Navbar,Container,Nav} from 'react-bootstrap';
 import '../css/Navbar.css';
 
@@ -31,7 +31,7 @@ import '../css/Navbar.css';
               <Link to="/">Home</Link> 
               </Nav.Link>
 
-                <img className='logoo' src={favorite} alt= "favorite" ></img>
+                <img className='logoo' src={home} alt= "favorite" ></img>
 
                   <Nav.Link id='Favorite' className={
                 currentPage === "Favorite" ? "active-nav" : "favorite"
